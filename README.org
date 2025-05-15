@@ -1,0 +1,69 @@
+* Nixos install
+
+** Configuration.nix
+
+1. Open shell:
+#+begin_src bash
+nix-shell -p git
+#+end_src
+
+2. clone:
+#+begin_src shell
+git clone https://github.com/ac-commits/dell-nix-dotfiles.git
+#+end_src
+
+3. Move nix config:
+   #+begin_src bash
+ sudo mv /etc/nixos/configuration.nix /etc/nixos/configuration.nix.bak
+   #+end_src
+
+4. Create a symlink:
+   #+begin_src bash
+sudo ln -s ~/nix-dotfiles/.config/nix/configuration.nix /etc/nixos/configuration.nix
+   #+end_src
+
+5. Install home-manager:
+   *Note:*
+   Run as user!
+   If you still use =git shell= =exit= first and add version.
+   #+begin_src bash
+ chmod +x ~/nix-dotfiles/scripts/install_home-manager.sh
+ ./~/nix-dotfiles/scripts/install_home-manager.sh 24.11
+   #+end_src
+** i3
+1. create i3:
+   #+begin_src bash
+mkdir ~/.config
+   #+end_src
+
+2. Create symlink:
+   #+begin_src bash
+ln -s ~/nix-dotfiles/.config/i3 ~/.config/
+   #+end_src
+
+** Polybar
+1. Create polybar:
+   #+begin_src bash
+mkdir .config/polybar
+   #+end_src
+2. Create symlink:
+   #+begin_src bash
+ln -s ~/nix-dotfiles/.config/polibar ~/.config/
+   #+end_src
+
+
+** Rebuild
+#+begin_src bash
+sudo nixos-rebuild switch -v
+#+end_src
+
+*** add password user
+#+begin_src bash
+sudo passwd $username
+#+end_src
+make sure that the config is implemented reboot with =sudo=:
+
+** reboot
+#+begin_src bash
+sudo reboot
+#+end_src

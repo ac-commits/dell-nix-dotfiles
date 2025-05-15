@@ -1,0 +1,5 @@
+
+import = ["/home/alex/.config/alacritty/catppuccin/catppuccin-macchiato.toml"]
+
+[window]
+opacity = 0.9

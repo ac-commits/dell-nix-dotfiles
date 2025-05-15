@@ -1,0 +1,20 @@
+* Home manager
+
+** Install home-manager:
+   *Note:*
+   Run as user!
+   If you still use =git shell= =exit= first and add version.
+   #+begin_src bash
+ chmod +x ~/nix-dotfiles/scripts/install_home-manager.sh
+ ./~/nix-dotfiles/scripts/install_home-manager.sh 24.11
+   #+end_src
+** Rebuild
+#+begin_src bash
+sudo nixos-rebuild switch -v
+#+end_src
+
+
+** reboot
+#+begin_src bash
+sudo reboot
+#+end_src

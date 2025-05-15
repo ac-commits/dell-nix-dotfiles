@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# key: image
+# name:Insert Image
+#--
+#+CAPTION:
+#+NAME: fig:$1
+#+ATTR_HTML: :width 75% :align center
+[[/home/alex/stack/img/$1.png]]
+
+
+$0
