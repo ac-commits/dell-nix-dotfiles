@@ -27,13 +27,11 @@
     # desktop apps
     firefox
     chromium
-    emacs29
-    okular
+    emacs30
     neovim
     ripgrep
     coreutils
     fd
-    clang
     graphviz
     gnupg
     appimage-run # to run stack appimage
@@ -53,7 +51,7 @@
     discord
     zotero
     #jetbrains.idea-ultimate
-    emote
+    #emote
     # direnv
     direnv
     nix-direnv
@@ -73,8 +71,8 @@
     evince
     darkman
     xfce.xfconf
-    nextcloud-client
-    notify-osd
+    #nextcloud-client
+    #notify-osd
     dunst
     # games
     #unstable.factorio
@@ -82,7 +80,7 @@
     nerdfonts
     emacs-all-the-icons-fonts
     #unstable.emacsPackages.mu4e
-    inter
+    #inter
     # shell
     fzf
     bat
@@ -95,7 +93,7 @@
     # networking
     networkmanager
     networkmanager_dmenu
-    protonvpn-gui
+    #protonvpn-gui
     # lockscreen
     betterlockscreen
     # docker
@@ -149,11 +147,11 @@
     '';
   };
 
-  programs.lsd = {
-    enable = true;
-    enableAliases = true;
-  };
-  
+  # programs.lsd = {
+  #   enable = true;
+  #   enableAliases = true;
+  # };
+
   programs.zsh = {
     enable = true;
     shellAliases = {
