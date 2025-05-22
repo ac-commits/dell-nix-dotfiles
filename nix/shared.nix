@@ -38,7 +38,9 @@
       #defaultNetwork.settings.dns_enabled = true;
     };
   };
- # virtualisation.vmware.host.enable = true;
+# vmware package is broken https://github.com/NixOS/nixpkgs/issues/392841#issuecomment-2777875962
+# thefore load ./vmware.nix
+# virtualisation.vmware.host.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Amsterdam";
