@@ -38,7 +38,7 @@
       #defaultNetwork.settings.dns_enabled = true;
     };
   };
-  virtualisation.vmware.host.enable = true;
+ # virtualisation.vmware.host.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Amsterdam";

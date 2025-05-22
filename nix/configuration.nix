@@ -11,13 +11,14 @@
        # Include the results of the hardware scan.
        ./hardware-configuration.nix
        ./shared.nix
+       ./vmware.nix
     ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "it hurts when IP"; # Define your hostname.
+  networking.hostName = "ItHurtsWhenIP"; # Define your hostname.
 
   # Machine specific config for X, such as graphics drivers
   nixpkgs.config.packageOverrides = pkgs: {
